@@ -20,6 +20,8 @@ public class JavaConfigDemoApp {
 		
 		context.close();
 		
+		//Init and destroy method
+		
 	}
 
 }
