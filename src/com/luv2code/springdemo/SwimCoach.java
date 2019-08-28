@@ -1,0 +1,57 @@
+package com.luv2code.springdemo;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class SwimCoach implements Coach {
+	
+	
+	public FortuneService fortuneService;
+	
+
+	@Value("${foo.email}")
+	private String email;
+	
+	@Value("${foo.team}")
+	private String team;
+	
+	
+	public SwimCoach(FortuneService thefortuneService) {
+		
+		fortuneService = thefortuneService;
+	}
+	
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public String getTeam() {
+		return team;
+	}
+
+
+	@Override
+	public String getDailyWorkout() {
+		// TODO Auto-generated method stub
+		return "Swim 1000 meters as a  warm up";
+	}
+	
+	@Override
+	public String getDailyFortune() {
+		
+		return fortuneService.getFortune();
+		
+	}
+
+}

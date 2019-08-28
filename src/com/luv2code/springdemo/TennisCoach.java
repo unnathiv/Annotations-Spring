@@ -25,6 +25,12 @@ public class TennisCoach implements Coach {
 		System.out.println("inside my PreDestroy");
 		
 	}
+
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
